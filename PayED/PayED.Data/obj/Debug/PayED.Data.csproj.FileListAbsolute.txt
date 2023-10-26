@@ -1,0 +1,9 @@
+C:\Users\ogwuc\Desktop\FCMB\PayED\PayED.Data\bin\Debug\PayED.Data.dll.config
+C:\Users\ogwuc\Desktop\FCMB\PayED\PayED.Data\bin\Debug\PayED.Data.dll
+C:\Users\ogwuc\Desktop\FCMB\PayED\PayED.Data\bin\Debug\PayED.Data.pdb
+C:\Users\ogwuc\Desktop\FCMB\PayED\PayED.Data\bin\Debug\System.ComponentModel.Annotations.dll
+C:\Users\ogwuc\Desktop\FCMB\PayED\PayED.Data\obj\Debug\PayED.Data.csproj.AssemblyReference.cache
+C:\Users\ogwuc\Desktop\FCMB\PayED\PayED.Data\obj\Debug\PayED.Data.csproj.CoreCompileInputs.cache
+C:\Users\ogwuc\Desktop\FCMB\PayED\PayED.Data\obj\Debug\PayED.Data.csproj.CopyComplete
+C:\Users\ogwuc\Desktop\FCMB\PayED\PayED.Data\obj\Debug\PayED.Data.dll
+C:\Users\ogwuc\Desktop\FCMB\PayED\PayED.Data\obj\Debug\PayED.Data.pdb

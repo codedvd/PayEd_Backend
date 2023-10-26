@@ -1,0 +1,6 @@
+C:\Users\ogwuc\Desktop\FCMB\PayED\PayEd.Core\bin\Debug\PayEd.Core.dll
+C:\Users\ogwuc\Desktop\FCMB\PayED\PayEd.Core\bin\Debug\PayEd.Core.pdb
+C:\Users\ogwuc\Desktop\FCMB\PayED\PayEd.Core\obj\Debug\PayEd.Core.csproj.AssemblyReference.cache
+C:\Users\ogwuc\Desktop\FCMB\PayED\PayEd.Core\obj\Debug\PayEd.Core.csproj.CoreCompileInputs.cache
+C:\Users\ogwuc\Desktop\FCMB\PayED\PayEd.Core\obj\Debug\PayEd.Core.dll
+C:\Users\ogwuc\Desktop\FCMB\PayED\PayEd.Core\obj\Debug\PayEd.Core.pdb
