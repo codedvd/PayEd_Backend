@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "9rQdg9m2j1E1wnFh98boG1mtBuHBuqfu9aknlzD9kpY=",
+  "Source": "PayEd.api",
+  "BasePath": "_content/PayEd.api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
