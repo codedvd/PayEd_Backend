@@ -1,0 +1,11 @@
+C:\Users\ogwuc\Desktop\FCMB\PayEd_Backend\PayEd.api\PayEd.Infrastructure\bin\Debug\net6.0\PayEd.Infrastructure.deps.json
+C:\Users\ogwuc\Desktop\FCMB\PayEd_Backend\PayEd.api\PayEd.Infrastructure\bin\Debug\net6.0\PayEd.Infrastructure.dll
+C:\Users\ogwuc\Desktop\FCMB\PayEd_Backend\PayEd.api\PayEd.Infrastructure\bin\Debug\net6.0\PayEd.Infrastructure.pdb
+C:\Users\ogwuc\Desktop\FCMB\PayEd_Backend\PayEd.api\PayEd.Infrastructure\obj\Debug\net6.0\PayEd.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ogwuc\Desktop\FCMB\PayEd_Backend\PayEd.api\PayEd.Infrastructure\obj\Debug\net6.0\PayEd.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\ogwuc\Desktop\FCMB\PayEd_Backend\PayEd.api\PayEd.Infrastructure\obj\Debug\net6.0\PayEd.Infrastructure.AssemblyInfo.cs
+C:\Users\ogwuc\Desktop\FCMB\PayEd_Backend\PayEd.api\PayEd.Infrastructure\obj\Debug\net6.0\PayEd.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\ogwuc\Desktop\FCMB\PayEd_Backend\PayEd.api\PayEd.Infrastructure\obj\Debug\net6.0\PayEd.Infrastructure.dll
+C:\Users\ogwuc\Desktop\FCMB\PayEd_Backend\PayEd.api\PayEd.Infrastructure\obj\Debug\net6.0\refint\PayEd.Infrastructure.dll
+C:\Users\ogwuc\Desktop\FCMB\PayEd_Backend\PayEd.api\PayEd.Infrastructure\obj\Debug\net6.0\PayEd.Infrastructure.pdb
+C:\Users\ogwuc\Desktop\FCMB\PayEd_Backend\PayEd.api\PayEd.Infrastructure\obj\Debug\net6.0\ref\PayEd.Infrastructure.dll
