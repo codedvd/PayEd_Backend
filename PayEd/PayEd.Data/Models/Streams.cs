@@ -11,10 +11,12 @@ namespace PayEd.Data.Models
     public class Streams
     {
         [Key]
-        public Guid Stream_id { get; set; }
+        public Guid Stream_Id { get; set; }
         public Stream_name Stream { get; set; }
         public string? Description { get; set; }
-        public User User_id { get; set; }
 
+        public Guid User_Id { get; set; }
+        public User User { get; set; }
     }
+
 }

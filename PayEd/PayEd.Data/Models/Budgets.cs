@@ -11,9 +11,11 @@ namespace PayEd.Data.Models
     public class Budgets : BaseEntity
     {
         [Key]
-        public Guid Budget_id { get; set; }
+        public Guid Budget_Id { get; set; }
         public string Budget_name { get; set; }
         public double Initial_balance { get; set; }
-        public User User_id { get; set; }
+
+        public Guid User_Id { get; set; }
+        public User User { get; set; }
     }
 }

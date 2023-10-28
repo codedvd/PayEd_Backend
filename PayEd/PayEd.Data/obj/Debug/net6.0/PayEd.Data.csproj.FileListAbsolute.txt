@@ -12,3 +12,17 @@ C:\Users\ogwuc\Desktop\FCMB\PayEd_Backend\PayEd.api\PayEd.Data\obj\Debug\net6.0\
 C:\Users\ogwuc\Desktop\FCMB\PayEd_Backend\PayEd.api\PayEd.Data\obj\Debug\net6.0\PayEd.Data.pdb
 C:\Users\ogwuc\Desktop\FCMB\PayEd_Backend\PayEd.api\PayEd.Data\obj\Debug\net6.0\PayEd.Data.genruntimeconfig.cache
 C:\Users\ogwuc\Desktop\FCMB\PayEd_Backend\PayEd.api\PayEd.Data\obj\Debug\net6.0\ref\PayEd.Data.dll
+C:\Users\ogwuc\Desktop\FCMB\PayEd_Backend\PayEd\PayEd.Data\bin\Debug\net6.0\PayEd.Data.deps.json
+C:\Users\ogwuc\Desktop\FCMB\PayEd_Backend\PayEd\PayEd.Data\bin\Debug\net6.0\PayEd.Data.runtimeconfig.json
+C:\Users\ogwuc\Desktop\FCMB\PayEd_Backend\PayEd\PayEd.Data\bin\Debug\net6.0\PayEd.Data.dll
+C:\Users\ogwuc\Desktop\FCMB\PayEd_Backend\PayEd\PayEd.Data\bin\Debug\net6.0\PayEd.Data.pdb
+C:\Users\ogwuc\Desktop\FCMB\PayEd_Backend\PayEd\PayEd.Data\obj\Debug\net6.0\PayEd.Data.csproj.AssemblyReference.cache
+C:\Users\ogwuc\Desktop\FCMB\PayEd_Backend\PayEd\PayEd.Data\obj\Debug\net6.0\PayEd.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ogwuc\Desktop\FCMB\PayEd_Backend\PayEd\PayEd.Data\obj\Debug\net6.0\PayEd.Data.AssemblyInfoInputs.cache
+C:\Users\ogwuc\Desktop\FCMB\PayEd_Backend\PayEd\PayEd.Data\obj\Debug\net6.0\PayEd.Data.AssemblyInfo.cs
+C:\Users\ogwuc\Desktop\FCMB\PayEd_Backend\PayEd\PayEd.Data\obj\Debug\net6.0\PayEd.Data.csproj.CoreCompileInputs.cache
+C:\Users\ogwuc\Desktop\FCMB\PayEd_Backend\PayEd\PayEd.Data\obj\Debug\net6.0\PayEd.Data.dll
+C:\Users\ogwuc\Desktop\FCMB\PayEd_Backend\PayEd\PayEd.Data\obj\Debug\net6.0\refint\PayEd.Data.dll
+C:\Users\ogwuc\Desktop\FCMB\PayEd_Backend\PayEd\PayEd.Data\obj\Debug\net6.0\PayEd.Data.pdb
+C:\Users\ogwuc\Desktop\FCMB\PayEd_Backend\PayEd\PayEd.Data\obj\Debug\net6.0\PayEd.Data.genruntimeconfig.cache
+C:\Users\ogwuc\Desktop\FCMB\PayEd_Backend\PayEd\PayEd.Data\obj\Debug\net6.0\ref\PayEd.Data.dll
