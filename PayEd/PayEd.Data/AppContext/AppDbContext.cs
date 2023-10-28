@@ -14,10 +14,11 @@ namespace PayEd.Data.AppContext
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 
         public DbSet<User> Users {  get; set; }
-        public DbSet<Stream> Streams {  get; set; }
+        public DbSet<Streams> Streams {  get; set; }
         public DbSet<Income> Incomes {  get; set; }
         public DbSet<Expenses> Expenses {  get; set; }
         public DbSet<Budgets> Budgets {  get; set; }
+        public DbSet<School> Schools {  get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

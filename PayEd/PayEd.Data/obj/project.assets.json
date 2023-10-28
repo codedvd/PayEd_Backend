@@ -2268,11 +2268,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ogwuc\\Desktop\\FCMB\\PayEd_Backend\\PayEd.api\\PayEd.Data\\PayEd.Data.csproj",
+      "projectUniqueName": "C:\\Users\\ogwuc\\Desktop\\FCMB\\PayEd_Backend\\PayEd\\PayEd.Data\\PayEd.Data.csproj",
       "projectName": "PayEd.Data",
-      "projectPath": "C:\\Users\\ogwuc\\Desktop\\FCMB\\PayEd_Backend\\PayEd.api\\PayEd.Data\\PayEd.Data.csproj",
+      "projectPath": "C:\\Users\\ogwuc\\Desktop\\FCMB\\PayEd_Backend\\PayEd\\PayEd.Data\\PayEd.Data.csproj",
       "packagesPath": "C:\\Users\\ogwuc\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ogwuc\\Desktop\\FCMB\\PayEd_Backend\\PayEd.api\\PayEd.Data\\obj\\",
+      "outputPath": "C:\\Users\\ogwuc\\Desktop\\FCMB\\PayEd_Backend\\PayEd\\PayEd.Data\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
