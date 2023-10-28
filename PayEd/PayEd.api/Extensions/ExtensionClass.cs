@@ -21,14 +21,6 @@ namespace PayEd.api.Extensions
 
             });
 
-            var keysDirectory = Path.Combine(Directory.GetCurrentDirectory(), "keys");
-#pragma warning disable CA1416 // Validate platform compatibility
-            services
-                .AddDataProtection()
-                .PersistKeysToFileSystem(new DirectoryInfo(keysDirectory))
-                .ProtectKeysWithDpapi();
-#pragma warning restore CA1416 // Validate platform compatibility
-
 
             services.AddIdentity<User, IdentityRole>()
                 .AddEntityFrameworkStores<AppDbContext>()
