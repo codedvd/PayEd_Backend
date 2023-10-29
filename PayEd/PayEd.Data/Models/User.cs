@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace PayEd.Data.Models
 {
-    public class User : IdentityUser
+    public class User : IdentityUser<Guid>
     {
         public Guid User_Id { get; set; }
         public Usertype User_type { get; set; }
