@@ -78,9 +78,11 @@ namespace PayEd.Core.Implementation
 
             return ApiResponse.Success(new
             {
+                Budget_name = budget.Budget_name,
                 DateCreated = budget.CreatedAt,
                 Description = budget.Description,
                 Amount = budget.Amount,
+                Status = budget.Status,
                 Budget_Id = budget.Budget_Id,
                 UserId = budget.UserId, 
             }, "Budget and user information successfully retrieved");
@@ -93,6 +95,9 @@ namespace PayEd.Core.Implementation
                 .Where(b => !b.isDeleted)
                 .Select(b => new
                 {
+                    Budget_name = b.Budget_name,
+                    Amount = b.Amount,
+                    Status = b.Status,
                     DateCreated = b.CreatedAt,
                     Description = b.Description,
                     Budget_Id = b.Budget_Id,
