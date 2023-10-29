@@ -15,10 +15,10 @@ namespace PayEd.Data.Models
         public string Description { get; set; }
         public double Amount { get; set; }
 
-        public Guid Stream_Id { get; set; }
+        public Guid StreamId { get; set; } // Foreign Key to Streams
         public Streams Stream { get; set; }
 
-        public Guid User_Id { get; set; }
+        public Guid UserId { get; set; } // Foreign Key to User
         public User User { get; set; }
     }
 

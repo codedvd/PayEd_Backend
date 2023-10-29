@@ -15,7 +15,9 @@ namespace PayEd.Data.Models
         public string Budget_name { get; set; }
         public double Initial_balance { get; set; }
 
-        public Guid User_Id { get; set; }
+        public Guid UserId { get; set; } // Foreign Key to User
         public User User { get; set; }
+
+        public ICollection<Expenses> Expenses { get; set; }
     }
 }

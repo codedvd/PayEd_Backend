@@ -12,11 +12,12 @@ namespace PayEd.Data.Models
     {
         [Key]
         public Guid Stream_Id { get; set; }
-        public Stream_name Stream { get; set; }
+        public string Stream_name { get; set; }
         public string? Description { get; set; }
 
-        public Guid User_Id { get; set; }
+        public Guid UserId { get; set; } // Foreign Key to User
         public User User { get; set; }
-    }
 
+        public ICollection<Income> Income { get; set; }
+    }
 }
