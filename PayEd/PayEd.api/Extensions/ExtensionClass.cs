@@ -10,6 +10,7 @@ using PayEd.Data.AppContext;
 using PayEd.Data.Models;
 using Supabase;
 using Supabase.Interfaces;
+using System.Text.Json.Serialization;
 
 namespace PayEd.api.Extensions
 {
@@ -23,6 +24,11 @@ namespace PayEd.api.Extensions
                 options.UseNpgsql(configiration.GetConnectionString("Default"));
             });
 
+            services.AddControllers()
+           .AddJsonOptions(options =>
+           {
+               options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.Preserve;
+           });
 
             services.AddDataProtection()
                 .PersistKeysToFileSystem(new DirectoryInfo("/app/keys"));

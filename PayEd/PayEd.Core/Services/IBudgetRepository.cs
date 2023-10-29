@@ -8,7 +8,7 @@ namespace PayEd.Core.Services
     {
         Task<ApiResponse> GetBudgetsAsync();
         Task<ApiResponse> GetBudgetAsync(Guid budgetId);
-        Task<ApiResponse> CreateBudgetAsync(BudgetDto budget);
+        Task<ApiResponse> CreateBudgetAsync(Guid userId, BudgetDto budget);
         Task<ApiResponse> UpdateBudgetAsync(Guid budgetId, BudgetDto budget);
         Task<ApiResponse> DeleteBudgetAsync(Guid budgetId);
     }

@@ -19,4 +19,9 @@ namespace PayEd.Data.Enums
         Grants
     }
 
+    public enum BudgetStatus
+    {
+        Paid,
+        Pending
+    }
 }
