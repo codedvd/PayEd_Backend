@@ -39,13 +39,13 @@ namespace PayEd.api.Controllers
         }
 
         [HttpPost("create-a-budget")]
-        public async Task<IActionResult> CreateBudget([FromBody] BudgetDto budget)
+        public async Task<IActionResult> CreateBudget(Guid userId, [FromBody] BudgetDto budget)
         {
             if(!ModelState.IsValid)
             {
                 return BadRequest("Invalid Input");
             }
-            var response = await _budget.CreateBudgetAsync(budget);
+            var response = await _budget.CreateBudgetAsync(userId, budget);
             if(response.Suceeded)
             {
                 return Ok(response);
@@ -76,7 +76,7 @@ namespace PayEd.api.Controllers
             {
                 return Ok(response);
             }
-            return BadRequest();
+            return BadRequest(response);
         }
     }
 }

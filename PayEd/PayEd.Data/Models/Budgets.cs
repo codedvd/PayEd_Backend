@@ -1,4 +1,5 @@
 ﻿using PayEd.Data.Common;
+using PayEd.Data.Enums;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -13,8 +14,9 @@ namespace PayEd.Data.Models
         [Key]
         public Guid Budget_Id { get; set; }
         public string Budget_name { get; set; }
-        public double Initial_balance { get; set; }
-
+        public string Description { get; set; }
+        public double? Amount { get; set; }
+        public BudgetStatus Status { get; set; }
         public Guid UserId { get; set; } // Foreign Key to User
         public User User { get; set; }
 

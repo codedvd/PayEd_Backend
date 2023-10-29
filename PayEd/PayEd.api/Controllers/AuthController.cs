@@ -18,7 +18,7 @@ namespace PayEd.api.Controllers
             _user = user;
         }
 
-        [HttpPost("register")]
+        [HttpPost("register-user")]
         public async Task<IActionResult> RegisterUser(UserRegistrationDto regDto)
         {
             if (!ModelState.IsValid)
@@ -32,6 +32,22 @@ namespace PayEd.api.Controllers
             }
             return BadRequest(response);
         }
+
+
+        //[HttpPost("register-school")]
+        //public async Task<IActionResult> RegisterSchool(SchoolDto regSchDto)
+        //{
+        //    if (!ModelState.IsValid)
+        //    {
+        //        return BadRequest("Invalid Input");
+        //    }
+        //    var response = await _user.CreateSchool(regSchDto);
+        //    if (response.Suceeded)
+        //    {
+        //        return Ok(response);
+        //    }
+        //    return BadRequest(response);
+        //}
 
         [HttpPost("login")]
         public async Task<IActionResult> LoginUser([FromBody] LoginDto login)

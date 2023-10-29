@@ -19,17 +19,26 @@ namespace PayEd.Core.Implementation
         {
             _context = context;
         }
-        public async Task<ApiResponse> CreateBudgetAsync(BudgetDto budget)
+        public async Task<ApiResponse> CreateBudgetAsync(Guid userId, BudgetDto budget)
         {
+            var user = _context.Users.FirstOrDefault(u => u.User_Id == userId);
+            if (user == null)
+            {
+                return ApiResponse.Error("User does not exist");
+            }
+
             var newbudget = new Budgets
             {
                 Budget_Id = Guid.NewGuid(),
                 Budget_name = budget.Budget_name,
-                Initial_balance = budget.Initial_balance,
-
-                CreatedAt = DateTime.Now,
-                UpdatedAt = DateTime.Now,
+                Description = budget.Description,
+                Amount = budget.Amount,
+                CreatedAt = DateTime.UtcNow,
+                UpdatedAt = DateTime.UtcNow,
                 isDeleted = false,
+                Status = Data.Enums.BudgetStatus.Pending,
+                User = user,
+                UserId = user.User_Id
             };
 
             await _context.Budgets.AddAsync(newbudget);
@@ -47,7 +56,7 @@ namespace PayEd.Core.Implementation
                 return ApiResponse.Error("Budget with this ID does not exist");
             }
             checkForOrder.isDeleted = true;
-            checkForOrder.UpdatedAt = DateTime.Now;
+            checkForOrder.UpdatedAt = DateTime.UtcNow;
 
             _context.Budgets.Update(checkForOrder);
             await _context.SaveChangesAsync();
@@ -58,23 +67,48 @@ namespace PayEd.Core.Implementation
 
         public async Task<ApiResponse> GetBudgetAsync(Guid budgetId)
         {
-            var budget = await _context.Budgets.FirstOrDefaultAsync(dat => dat.Budget_Id == budgetId && !dat.isDeleted);
+            var budget = await _context.Budgets
+                .Include(b => b.User)
+                .FirstOrDefaultAsync(dat => dat.Budget_Id == budgetId && !dat.isDeleted);
+
             if (budget == null)
             {
                 return ApiResponse.Error("Budget with this Id does not exist");
             }
-            return ApiResponse.Success(budget, "Budget successfully retrieved");
+
+            return ApiResponse.Success(new
+            {
+                DateCreated = budget.CreatedAt,
+                Description = budget.Description,
+                Amount = budget.Amount,
+                Budget_Id = budget.Budget_Id,
+                UserId = budget.UserId, 
+            }, "Budget and user information successfully retrieved");
         }
+
 
         public async Task<ApiResponse> GetBudgetsAsync()
         {
-           var budgets = await _context.Budgets.ToListAsync();
-            if(budgets == null)
+            var budgets = await _context.Budgets
+                .Where(b => !b.isDeleted)
+                .Select(b => new
+                {
+                    DateCreated = b.CreatedAt,
+                    Description = b.Description,
+                    Budget_Id = b.Budget_Id,
+                    User_Id = b.User.User_Id
+                })
+                .ToListAsync();
+
+            if (budgets == null || !budgets.Any())
             {
-                return ApiResponse.Error("Budget does not exist");
+                return ApiResponse.Error("No budgets exist");
             }
-            return ApiResponse.Success(budgets, "All budget successfully retrieved");
+
+            return ApiResponse.Success(budgets, "All budgets with user information successfully retrieved");
         }
+
+
 
         public async Task<ApiResponse> UpdateBudgetAsync(Guid budgetId, BudgetDto budget)
         {
@@ -84,8 +118,9 @@ namespace PayEd.Core.Implementation
                 return ApiResponse.Error("Budget with this ID does not exist");
             }
 
-            existingBudget.Budget_name = budget.Budget_name; 
-            existingBudget.Initial_balance = budget.Initial_balance;
+            existingBudget.Budget_name = budget.Budget_name;
+            existingBudget.Description = budget.Description;
+            existingBudget.Amount = budget.Amount;
             existingBudget.UpdatedAt = DateTime.UtcNow;
             existingBudget.isDeleted = false;
 

@@ -8,6 +8,7 @@ namespace PayEd.Core.Services
     {
         Task<ApiResponse> Login(LoginDto login);
         Task<ApiResponse> CreateUser(UserRegistrationDto userRequest);
+        //Task<ApiResponse> CreateSchool(SchoolDto userRequest);
         Task<ApiResponse> SignOut();
     }
 }
