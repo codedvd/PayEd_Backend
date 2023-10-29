@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.DataProtection;
+using Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel;
+using Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -21,16 +23,16 @@ namespace PayEd.api.Extensions
                 options.UseNpgsql(configiration.GetConnectionString("Default"));
             });
 
-            services.AddScoped<Supabase.Client>(_ =>
-                new Supabase.Client(
-                    configiration["SupabaseUrl"],
-                    configiration["SupabaseKey"],
-                    new SupabaseOptions
-                    {
-                        AutoRefreshToken = true,
-                        AutoConnectRealtime = true,
-                    }
-            ));
+
+            services.AddDataProtection()
+                .PersistKeysToFileSystem(new DirectoryInfo("/app/keys"));
+
+            services.AddDataProtection()
+                .UseCryptographicAlgorithms(new AuthenticatedEncryptorConfiguration()
+                {
+                    EncryptionAlgorithm = EncryptionAlgorithm.AES_256_GCM,
+                    ValidationAlgorithm = ValidationAlgorithm.HMACSHA256
+                });
 
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<IBudgetRepository, BudgetRepository>();
