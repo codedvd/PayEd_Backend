@@ -24,11 +24,13 @@ builder.Services.ConfigureCloudinary(builder.Configuration);
 builder.Services.AddHttpClient();
 
 // Add configuration settings from appsettings.json
-builder.Configuration.SetBasePath(System.IO.Directory.GetCurrentDirectory())
+builder.Configuration
+    .SetBasePath(System.IO.Directory.GetCurrentDirectory())
     .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
     .AddJsonFile($"appsettings.{builder.Environment.EnvironmentName}.json", optional: true, reloadOnChange: true)
     .AddEnvironmentVariables()
     .Build();
+
 
 builder.Services.AddCors(options =>
 {
@@ -44,17 +46,19 @@ builder.Services.AddCors(options =>
 
 var app = builder.Build();
 
-app.UseCors("AllowAllOrigins");
-
 // Configure the HTTP request pipeline.
+app.UseHttpsRedirection();
+
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
+app.UseRouting();
+app.UseCors("AllowAllOrigins");
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
