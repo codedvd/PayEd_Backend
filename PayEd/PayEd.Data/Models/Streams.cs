@@ -13,7 +13,8 @@ namespace PayEd.Data.Models
         [Key]
         public Guid Stream_Id { get; set; }
         public string Stream_name { get; set; }
-        public string? Description { get; set; }
+        public string Description { get; set; }
+        public string? StreamCode { get; set; }
 
         public Guid UserId { get; set; } // Foreign Key to User
         public User User { get; set; }

@@ -15,7 +15,7 @@ namespace PayEd.Data.Models
         public Guid Budget_Id { get; set; }
         public string Budget_name { get; set; }
         public string Description { get; set; }
-        public double? Amount { get; set; }
+        public double Amount { get; set; }
         public BudgetStatus Status { get; set; }
         public Guid UserId { get; set; } // Foreign Key to User
         public User User { get; set; }

@@ -19,7 +19,7 @@ namespace PayEd.api.Controllers
             _expense = expense;
         }
 
-        [Authorize("Admin")]
+        //[Authorize("Admin")]
         [HttpGet("get-all-expense")]
         public async Task<IActionResult> GetExpenses()
         {
@@ -39,9 +39,13 @@ namespace PayEd.api.Controllers
         }
 
         [HttpPost("create-an-expense")]
-        public async Task<ActionResult<int>> CreateExpense([FromBody] ExpenseDto expense)
+        public async Task<ActionResult<Guid>> CreateExpense(Guid userId, [FromBody] ExpenseDto expense)
         {
-            var expenseID = await _expense.CreateExpenseAsync(expense);
+            if (!ModelState.IsValid)
+            {
+                return BadRequest("Invalid Inputs in Fields");
+            }
+            var expenseID = await _expense.CreateExpenseAsync(userId, expense);
             return CreatedAtAction(nameof(GetExpense), new { expenseID }, expenseID);
         }
 
