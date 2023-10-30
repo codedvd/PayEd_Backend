@@ -1,4 +1,5 @@
-﻿using PayEd.Data.Enums;
+﻿using PayEd.Data.Common;
+using PayEd.Data.Enums;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace PayEd.Data.Models
 {
-    public class Streams
+    public class Streams : BaseEntity
     {
         [Key]
         public Guid Stream_Id { get; set; }
