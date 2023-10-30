@@ -8,7 +8,7 @@ namespace PayEd.Core.Services
     {
         Task<ApiResponse> GetExpensesAsync();
         Task<ApiResponse> GetExpenseAsync(Guid expenseID);
-        Task<ApiResponse> CreateExpenseAsync(ExpenseDto expense);
+        Task<ApiResponse> CreateExpenseAsync(Guid userId, ExpenseDto expense);
         Task<ApiResponse> UpdateExpenseAsync(Guid expenseID, ExpenseDto expense);
         Task<ApiResponse> DeleteExpenseAsync(Guid expenseID);
     }

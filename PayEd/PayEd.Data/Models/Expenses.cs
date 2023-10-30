@@ -12,11 +12,11 @@ namespace PayEd.Data.Models
     {
         [Key]
         public Guid Expense_Id { get; set; }
-        public string? Description { get; set; }
+        public string Description { get; set; }
         public double Amount { get; set; }
-        public string Category { get; set; }
+        public string? Category { get; set; }
 
-        public Guid BudgetId { get; set; } // Foreign Key to Budgets
+        public Guid BudgetId { get; set; } 
         public Budgets Budget { get; set; }
     }
 }
